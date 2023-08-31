@@ -106,8 +106,38 @@ const loadDetail = async (id) => {
   const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data);
+  displayDetail(data);
 };
+
+const displayDetail=data=>{
+  console.log(data);
+  const modalBody=document.getElementById("modal-content");
+  modalBody.innerHTML = `<div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>`;
+}
 
 // toggle spinner function
 
