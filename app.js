@@ -12,12 +12,15 @@ const displayData=ais=>{
     console.log(ais);
     const aiContainer=document.getElementById("ai-box-container");
     ais.forEach(ai=>{
+        if(ai.id==="06"){
+            return;
+        }
         const eachBox=document.createElement("div");
         eachBox.classList.add("col");
         eachBox.innerHTML = `<div class="card h-100">
-              <img src="..." class="card-img-top" alt="..." />
+              <img src="${ai.image}" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">${ai.name}</h5>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
