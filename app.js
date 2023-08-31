@@ -18,9 +18,9 @@ const displayData=ais=>{
         const eachBox=document.createElement("div");
         eachBox.classList.add("col");
         eachBox.innerHTML = `<div class="card h-100">
-              <img src="${ai.image}" class="card-img-top" alt="..." />
+              <img src="${ai.image}" class="card-img-top p-3 rounded-5" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">${ai.name}</h5>
+                <h5 class="card-title">Features</h5>
                 <p class="card-text">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content. This content is a little bit
