@@ -194,9 +194,6 @@ const displayDetail=data=>{
                 <div class="card h-100 p-3">
                   <div>
                     <img src="${detaildata.image_link[0]}" class="card-img-top" alt="..." />
-                    <div class="mt-2" >
-                      <button class="btn btn-danger text-white">${detaildata.accuracy.score*100}% accuracy </button>    
-                    </div>
                   </div>
                   <div class="card-body">
                   <h4 class="card-title text-center">${detaildata.input_output_examples[0].input}</h4>
