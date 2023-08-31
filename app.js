@@ -69,6 +69,9 @@ const displayAllData = (ais) => {
     if (ai.id === "06") {
       return;
     }
+    if(ai.id ==="12"){
+      return;
+    }
     const eachBox = document.createElement("div");
     eachBox.classList.add("col");
     eachBox.innerHTML = `<div class="card h-100">
@@ -123,10 +126,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-success">${
-                                detaildata.pricing?.[0].price ? detaildata.pricing: "Free"
+                                detaildata.pricing?.[0].price 
                               } </p>
                               <p class="text-success">${
-                                detaildata.pricing?.[0].plan ? detaildata.pricing: "of cost"
+                                detaildata.pricing?.[0].plan 
                               } </p>
                             </div>
                           </div>
@@ -135,10 +138,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-primary">${
-                                detaildata.pricing?.[1].price ? detaildata.pricing: "Free"
+                                detaildata.pricing?.[1].price 
                               } </p>
                               <p class="text-primary">${
-                                detaildata.pricing?.[1].plan ? detaildata.pricing: "of cost"
+                                detaildata.pricing?.[1].plan
                               } </p>
                             </div>
                           </div>
@@ -147,10 +150,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-danger">${
-                                detaildata.pricing?.[2].price ? detaildata.pricing: "Free"
+                                detaildata.pricing?.[2].price 
                               } </p>
                               <p class="text-danger">${
-                                detaildata.pricing?.[2].plan ? detaildata.pricing: "of cost"
+                                detaildata.pricing?.[2].plan 
                               } </p>
                             </div>
                           </div>
@@ -189,7 +192,7 @@ const displayDetail=data=>{
               </div>
               <div class="col">
                 <div class="card h-100 p-3">
-                  <img src="" class="card-img-top" alt="..." />
+                  <img src="${detaildata.image_link[0]}" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
