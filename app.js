@@ -192,14 +192,16 @@ const displayDetail=data=>{
               </div>
               <div class="col">
                 <div class="card h-100 p-3">
-                  <img src="${detaildata.image_link[0]}" class="card-img-top" alt="..." />
+                  <div>
+                    <img src="${detaildata.image_link[0]}" class="card-img-top" alt="..." />
+                    <div class="mt-2" >
+                      <button class="btn btn-danger text-white">${detaildata.accuracy.score*100}% accuracy </button>    
+                    </div>
+                  </div>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
+                  <h4 class="card-title text-center">${detaildata.input_output_examples[0].input}</h4>
+                  <h6 class="card-title text-center text-secondary">${detaildata.input_output_examples[0].output}</h6>
+                  
                   </div>
                 </div>
               </div>`;
