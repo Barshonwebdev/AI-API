@@ -1,4 +1,4 @@
-// data loading
+// data loading of 6
 const loadData = async () => {
   const url = "https://openapi.programming-hero.com/api/ai/tools";
   const res = await fetch(url);
@@ -8,6 +8,7 @@ const loadData = async () => {
   displayData(allData);
 };
 
+// all data loading 
 const loadAllData = async () => {
   const url = "https://openapi.programming-hero.com/api/ai/tools";
   const res = await fetch(url);
@@ -19,6 +20,7 @@ const loadAllData = async () => {
   buttonBox.classList.add("d-none");
 };
 
+// displaying data of 6 
 const displayData = (ais) => {
   console.log(ais);
   const aiContainer = document.getElementById("ai-box-container");
@@ -55,6 +57,7 @@ const displayData = (ais) => {
   });
 };
 
+// displaying all data 
 const displayAllData = (ais) => {
   console.log(ais);
   const aiContainer = document.getElementById("ai-box-container");
@@ -91,4 +94,5 @@ const displayAllData = (ais) => {
   });
 };
 
+// initial loading 
 loadData();
