@@ -11,7 +11,8 @@ const loadData = async () => {
 const displayData = (ais) => {
   console.log(ais);
   const aiContainer = document.getElementById("ai-box-container");
-  ais.forEach((ai) => {
+  arrayForSix=ais.slice(0,7);
+  arrayForSix.forEach((ai) => {
     if (ai.id === "06") {
       return;
     }
