@@ -33,11 +33,9 @@ const displayData = (ais) => {
               <img src="${ai.image}" class="card-img-top p-3 rounded-5" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Features</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+                <p>1. ${ai.features[0]}</p>
+                <p>2. ${ai.features[1]}</p>
+                <p>3. ${ai.features[2]? ai.features[2]:"Fast Service"}</p>
               </div>
               <div class="card-footer bg-white d-flex justify-content-between align-items-center">
               <div>
@@ -71,11 +69,9 @@ const displayAllData = (ais) => {
               <img src="${ai.image}" class="card-img-top p-3 rounded-5" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Features</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+                <p>1. ${ai.features[0]}</p>
+                <p>2. ${ai.features[1]}</p>
+                <p>3. ${ai.features[2]? ai.features[2]:"Fast Service"}</p>
               </div>
               <div class="card-footer bg-white d-flex justify-content-between align-items-center">
               <div>
