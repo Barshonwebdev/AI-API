@@ -71,12 +71,14 @@ const displayAllData = (ais) => {
     const eachBox = document.createElement("div");
     eachBox.classList.add("col");
     eachBox.innerHTML = `<div class="card h-100">
-              <img src="${ai.image}" class="card-img-top p-3 rounded-5" alt="..." />
+              <img src="${
+                ai.image
+              }" class="card-img-top p-3 rounded-5" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Features</h5>
                 <p>1. ${ai.features[0]}</p>
                 <p>2. ${ai.features[1]}</p>
-                <p>3. ${ai.features[2]? ai.features[2]:"Fast Service"}</p>
+                <p>3. ${ai.features[2] ? ai.features[2] : "Fast Service"}</p>
               </div>
               <div class="card-footer bg-white d-flex justify-content-between align-items-center">
               <div>
@@ -88,7 +90,7 @@ const displayAllData = (ais) => {
                 </p>
               </div>
               <div>
-                <button class="btn btn-primary">View Details</button>
+                <button data-bs-toggle="modal" data-bs-target="#detailModal" class="btn btn-primary">View Details</button>
               </div>
               </div>
             </div> `;
