@@ -110,17 +110,80 @@ const loadDetail = async (id) => {
 };
 
 const displayDetail=data=>{
-  console.log(data);
+  const detaildata=data.data;
+  console.log(detaildata);
   const modalBody=document.getElementById("modal-content");
-  modalBody.innerHTML = `<div class="col">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="..." />
+  modalBody.innerHTML = `<div class="col ">
+                <div class="card h-100 bg-success-subtle border border-success">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content.
-                    </p>
+                    <h5 class="card-title">${detaildata.description}</h5>
+                    <div>
+                    <div class="row row-cols-md-3 g-2 mt-3">
+                        <div class="col">
+                          <div class="card h-100">
+                            <div class="card-body text-center">
+                              <p class="text-success">${
+                                detaildata.pricing[0].price
+                              } </p>
+                              <p class="text-success">${
+                                detaildata.pricing[0].plan
+                              } </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <div class="card-body text-center">
+                              <p class="text-primary">${
+                                detaildata.pricing[1].price
+                              } </p>
+                              <p class="text-primary">${
+                                detaildata.pricing[1].plan
+                              } </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <div class="card-body text-center">
+                              <p class="text-danger">${
+                                detaildata.pricing[2].price
+                              } </p>
+                              <p class="text-danger">${
+                                detaildata.pricing[2].plan
+                              } </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-between">
+                      <div>
+                      <h5> Features </h5>
+                      <p>1.${detaildata.features[1].feature_name} </p>
+                      <p>2.${detaildata.features[2].feature_name} </p>
+                      <p>3.${detaildata.features[3].feature_name} </p>
+                      </div>
+
+                      <div>   
+                      <h5> Integrations </h5>
+                      <p>1.${
+                        detaildata.integrations[0]
+                          ? detaildata.integrations[0]
+                          : "No data found"
+                      } </p>
+                      <p>2.${
+                        detaildata.integrations[1]
+                          ? detaildata.integrations[1]
+                          : "No data found"
+                      } </p>
+                      <p>3.${
+                        detaildata.integrations[2]
+                          ? detaildata.integrations[2]
+                          : "No data found"
+                      } </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
