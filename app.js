@@ -51,7 +51,7 @@ const displayData = (ais) => {
                 </p>
               </div>
               <div>
-                <button class="btn btn-primary">View Details</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal">View Details</button>
               </div>
               </div>
             </div> `;
