@@ -20,12 +20,25 @@
     <main>
       <!-- box section  -->
       <section class="px-4 mt-4 mb-3">
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="ai-box-container">
-          
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4"
+          id="ai-box-container"
+        ></div>
+        <!-- see more button    -->
+        <div
+          id="see-more-container"
+          class="d-flex justify-content-center mt-3 mb-3"
+        >
+          <button class="btn btn-success" onclick="loadAllData()">
+            See More
+          </button>
         </div>
-      <!-- see more button    -->
-        <div id="see-more-container" class="d-flex justify-content-center mt-3 mb-3">
-          <button class="btn btn-success" onclick="loadAllData()">See More</button>
+
+        <!-- spinner  -->
+        <div class="text-center d-none" id="spinner">
+          <div class="spinner-border mt-2 text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </section>
     </main>

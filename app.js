@@ -10,12 +10,14 @@ const loadData = async () => {
 
 // all data loading 
 const loadAllData = async () => {
+  toggleSpinner(true);
   const url = "https://openapi.programming-hero.com/api/ai/tools";
   const res = await fetch(url);
   const data = await res.json();
   const allData = data.data.tools;
   console.log(data.data.tools);
   displayAllData(allData);
+  toggleSpinner(false);
   const buttonBox=document.getElementById("see-more-container");
   buttonBox.classList.add("d-none");
 };
@@ -94,5 +96,18 @@ const displayAllData = (ais) => {
   });
 };
 
+// toggle spinner function 
+
+const toggleSpinner=isLoading=>{
+  const spinner=document.getElementById("spinner");
+  if(isLoading){
+    spinner.classList.remove("d-none");
+    spinner.classList.add("d-block");
+  }
+  else {
+    spinner.classList.remove("d-block");
+    spinner.classList.add("d-none");
+  }
+}
 // initial loading 
 loadData();
