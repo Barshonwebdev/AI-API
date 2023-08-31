@@ -98,6 +98,15 @@ const displayAllData = (ais) => {
   });
 };
 
+// load detail data 
+const loadDetail=async id=>{
+  const url= `https://openapi.programming-hero.com/api/ai/tool/${id}`;
+  const res= await fetch(url);
+  const data= await res.json();
+  console.log(data);
+}
+
+loadDetail("03");
 // toggle spinner function 
 
 const toggleSpinner=isLoading=>{
