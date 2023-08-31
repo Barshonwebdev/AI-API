@@ -123,10 +123,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-success">${
-                                detaildata.pricing[0].price
+                                detaildata.pricing?.[0].price ? detaildata.pricing: "Free"
                               } </p>
                               <p class="text-success">${
-                                detaildata.pricing[0].plan
+                                detaildata.pricing?.[0].plan ? detaildata.pricing: "of cost"
                               } </p>
                             </div>
                           </div>
@@ -135,10 +135,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-primary">${
-                                detaildata.pricing[1].price
+                                detaildata.pricing?.[1].price ? detaildata.pricing: "Free"
                               } </p>
                               <p class="text-primary">${
-                                detaildata.pricing[1].plan
+                                detaildata.pricing?.[1].plan ? detaildata.pricing: "of cost"
                               } </p>
                             </div>
                           </div>
@@ -147,10 +147,10 @@ const displayDetail=data=>{
                           <div class="card h-100">
                             <div class="card-body text-center">
                               <p class="text-danger">${
-                                detaildata.pricing[2].price
+                                detaildata.pricing?.[2].price ? detaildata.pricing: "Free"
                               } </p>
                               <p class="text-danger">${
-                                detaildata.pricing[2].plan
+                                detaildata.pricing?.[2].plan ? detaildata.pricing: "of cost"
                               } </p>
                             </div>
                           </div>
@@ -168,17 +168,17 @@ const displayDetail=data=>{
                       <div>   
                       <h5> Integrations </h5>
                       <p>1.${
-                        detaildata.integrations[0]
+                        detaildata.integrations?.[0]
                           ? detaildata.integrations[0]
                           : "No data found"
                       } </p>
                       <p>2.${
-                        detaildata.integrations[1]
+                        detaildata.integrations?.[1]
                           ? detaildata.integrations[1]
                           : "No data found"
                       } </p>
                       <p>3.${
-                        detaildata.integrations[2]
+                        detaildata.integrations?.[2]
                           ? detaildata.integrations[2]
                           : "No data found"
                       } </p>
@@ -188,8 +188,8 @@ const displayDetail=data=>{
                 </div>
               </div>
               <div class="col">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="..." />
+                <div class="card h-100 p-3">
+                  <img src="" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
